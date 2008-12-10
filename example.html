@@ -4,8 +4,7 @@
   <script type="text/javascript" src="./jquery.at_intervals.js"></script>
 </head>
 <body>
-  <h1>FF + FireBug. Observe console</h1>
-  <a href="#" id="quit">Quit (remove the widget from DOM)</a>
+  <a href="#" id="quit">Quit (removes the widget from DOM and stops setIntervals)</a>
   <script type="text/javascript">
     $("#quit").click(function(){
       $("#tagsoup1").empty()
@@ -19,6 +18,7 @@
       <div id="widget">
         <p>Widget with setIntervals. Self-contained piece of code and looks.</p>
         <div id="logic" style="background-color: red; width: 66px; height: 66px"></div>
+
         <script type="text/javascript">
           $("#widget").at_intervals(function(){
             $("#logic").toggle(200)
@@ -28,7 +28,6 @@
 
     </div>
   </div>
+
 </body>
 </html>
-
-

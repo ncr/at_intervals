@@ -1,3 +1,5 @@
+// Author: Jacek Becela
+// License: cc-by-sa
 (function($) {
   $.fn.at_intervals = function(codes, interval) {
     return this.each(function() {
