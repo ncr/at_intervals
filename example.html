@@ -9,6 +9,7 @@
   <a href="#" id="toggle_visibility">Toggle visibility (pauses/resumes the intervals)</a>
   <a href="#" id="pause_resume">Pause/Resume</a>
   <a href="#" id="stop">Stop</a>
+  <a href="#" id="swap_fn">Swap function</a>
   <script type="text/javascript">
     $("#remove_from_dom").click(function(){
       $("#tagsoup1").empty()
@@ -32,6 +33,13 @@
       $("#widget").data("foo").should_stop = true
       return false
     });
+    
+    $("#swap_fn").click(function(){
+      $("#widget").data("foo").fn = function(){
+        console.log("Swapped!!!")
+      }
+      return false
+    })
   </script>
 
 

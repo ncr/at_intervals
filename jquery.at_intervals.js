@@ -28,6 +28,11 @@
           return it.data(name).should_pause == true
         }
       }
+
+      it.data(name, { 
+        delay: delay,
+        fn: fn
+      })
       
       var interval_id = setInterval(function() {
         if(helper.should_stop()) {
@@ -35,15 +40,12 @@
           it.removeData(name)
         } else {
           if(helper.should_work()){
-            fn()
+            it.data(name).fn()
           }
         }
       }, delay)
       
-      it.data(name, { 
-        delay: delay,
-        interval_id: interval_id
-      })
+      it.data(name).interval_id = interval_id
     })
   };
 })(jQuery);
