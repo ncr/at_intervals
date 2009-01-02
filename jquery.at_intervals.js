@@ -16,7 +16,7 @@
           return this.is_visible() && !this.user_wants_to_pause()
         },
         removed_from_dom: function() {
-          return $(it).parents("html").length == 0
+          return it.parents("html").length == 0
         },
         user_wants_to_stop: function() {
           return it.data(name).should_stop == true
