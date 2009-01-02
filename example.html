@@ -4,10 +4,33 @@
   <script type="text/javascript" src="./jquery.at_intervals.js"></script>
 </head>
 <body>
-  <a href="#" id="quit">Quit (removes the widget from DOM and stops setIntervals)</a>
+  <h1>Observe the Firebug Console</h1>
+  <a href="#" id="remove_from_dom">Remove from DOM (stops the intervals)</a>
+  <a href="#" id="toggle_visibility">Toggle visibility (pauses/resumes the intervals)</a>
+  <a href="#" id="pause_resume">Pause/Resume</a>
+  <a href="#" id="stop">Stop</a>
   <script type="text/javascript">
-    $("#quit").click(function(){
+    $("#remove_from_dom").click(function(){
       $("#tagsoup1").empty()
+      return false
+    });
+
+    $("#toggle_visibility").click(function(){
+      $("#tagsoup1").toggle()
+      return false
+    });
+
+    $("#pause_resume").toggle(function(){
+      $("#widget").data("foo").should_pause = true
+      return false
+    }, function() {
+      $("#widget").data("foo").should_pause = false
+      return false
+    });
+
+    $("#stop").click(function(){
+      $("#widget").data("foo").should_stop = true
+      return false
     });
   </script>
 
@@ -21,8 +44,9 @@
 
         <script type="text/javascript">
           $("#widget").at_intervals(function(){
+            console.log("working...")
             $("#logic").toggle(200)
-          }, 1000);
+          }, { name: "foo", delay: 1000 });
         </script>
       </div>
 
