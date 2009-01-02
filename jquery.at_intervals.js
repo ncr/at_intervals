@@ -28,7 +28,12 @@
           return it.data(name).should_pause == true
         }
       }
-
+      
+      // remove previous interval
+      if(it.data(name)) {
+        clearInterval(it.data(name).interval_id)
+      }
+      
       it.data(name, { 
         delay: delay,
         fn: fn

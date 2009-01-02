@@ -5,11 +5,12 @@
 </head>
 <body>
   <h1>Observe the Firebug Console</h1>
-  <a href="#" id="remove_from_dom">Remove from DOM (stops the intervals)</a>
-  <a href="#" id="toggle_visibility">Toggle visibility (pauses/resumes the intervals)</a>
-  <a href="#" id="pause_resume">Pause/Resume</a>
-  <a href="#" id="stop">Stop</a>
-  <a href="#" id="swap_fn">Swap function</a>
+  <a href="#" id="remove_from_dom">Remove from DOM (stops the intervals)</a><br />
+  <a href="#" id="toggle_visibility">Toggle visibility (pauses/resumes the intervals)</a><br />
+  <a href="#" id="pause_resume">Pause/Resume</a><br />
+  <a href="#" id="stop">Stop</a><br />
+  <a href="#" id="swap_fn">Swap function</a><br />
+  <a href="#" id="start_another">Start another on top of exisiting one</a><br />
   <script type="text/javascript">
     $("#remove_from_dom").click(function(){
       $("#tagsoup1").empty()
@@ -39,6 +40,13 @@
         console.log("Swapped!!!")
       }
       return false
+    })
+    
+    $("#start_another").click(function(){
+      $("#widget").at_intervals(function(){
+        console.log("Another one...")
+        return false
+      }, { name: "foo", delay: 500 })
     })
   </script>
 
