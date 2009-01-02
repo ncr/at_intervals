@@ -39,6 +39,8 @@
         fn: fn
       })
       
+      fn() // call fn immediately (setInterval applies the delay before calling fn for the first time)
+      
       var interval_id = setInterval(function() {
         if(helper.should_stop()) {
           clearInterval(interval_id)
