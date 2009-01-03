@@ -57,3 +57,8 @@ Functionality with examples
         $("#widget").at_intervals(fn1, { delay: 3000, name: "poll_messages") // stops fn, starts fn1
         $("#widget").at_intervals(fn2, { delay: 1000, name: "poll_messages") // stops fn1, starts fn2
         $("#widget").at_intervals(fn3, { delay: 1000, name: "poll_messages") // stops fn2, starts fn3
+
+License
+-------
+
+http://creativecommons.org/licenses/by-sa/3.0/
