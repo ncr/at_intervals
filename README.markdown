@@ -34,7 +34,7 @@ Functionality with examples
         $("#widget").at_intervals(fn, { delay: 3000, name: "poll_messages") // calls fn(), then 3s delay, then fn() again, etc..
 
 2.  Bind the periodical execution to a **DOM** element (usually the div representing the widget).
-    This allows for pausing the execution automatically when the div is hidden and for stopping
+    This allows pausing the execution automatically when the div is hidden and stopping
     if the div gets removed from **DOM**.
 
         $("#widget").hide() // pauses execution
