@@ -1,7 +1,7 @@
 At Intervals
 ============
 
-Using the power of *jQuery* to mitigate the awkwardness 
+Using the power of **jQuery** to mitigate the awkwardness 
 of `window.setInterval()` and `window.clearInterval()`.
 
 
@@ -9,13 +9,13 @@ What problem does this plugin solve?
 ------------------------------------
 
 Once in a while I have to implement a widget consisting of some code and looks.
-The looks are some divs with styling. The code is a *JavaScript* snippet that usually 
+The looks are some divs with styling. The code is a **JavaScript** snippet that usually 
 polls for some data at given intervals (using `setInterval()` at some point).
 
 This is quite normal, nothing fancy by now.
 
 There are some additional requirements however. The widget can be _temporarily hidden_
-or _completely removed_ from the *DOM*. It can also be _paused_ or _stopped_ by a user.
+or _completely removed_ from the **DOM**. It can also be _paused_ or _stopped_ by a user.
 
 All these requirements boil down to stopping or pausing execution of `setInterval()` function.
 
@@ -32,9 +32,9 @@ Functionality with examples
 
         $("#widget").at_intervals(fn, { delay: 3000, name: "poll_messages") // calls fn(), then 3s delay, then fn() again, etc..
 
-2.  Bind the periodical execution to a *DOM* element (usually the div representing the widget).
+2.  Bind the periodical execution to a **DOM** element (usually the div representing the widget).
     This allows for pausing the execution automatically when the div is hidden and for stopping
-    if the div gets removed from the *DOM*.
+    if the div gets removed from **DOM**.
 
         $("#widget").hide() // pauses execution
         $("#widget").show() // resumes execution
