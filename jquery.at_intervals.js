@@ -12,22 +12,22 @@
       
       var helper = {
         should_stop: function() { // used to completely remove the interval
-          return this.removed_from_dom() || this.user_wants_to_stop()
+          return !this.element_in_dom() || this.user_wants_to_stop()
         },
         should_work: function() { // used to pause/resume the interval
-          return this.is_visible() && !this.user_wants_to_pause()
-        },
-        removed_from_dom: function() {
-          return e.parents("html").length == 0
+          return this.element_visible() && !this.user_wants_to_pause()
         },
         user_wants_to_stop: function() {
           return e.data(name).should_stop == true
         },
-        is_visible: function() {
-          return e.parents("*").andSelf().not(":visible").length == 0
-        },
         user_wants_to_pause: function() {
           return e.data(name).should_pause == true
+        },
+        element_in_dom: function() {
+          return e.parents("html").length > 0
+        },
+        element_visible: function() {
+          return e.parents("*").andSelf().not(":visible").length == 0
         },
         stop: function(interval_id) {
           clearInterval(interval_id)
