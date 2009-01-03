@@ -43,17 +43,17 @@ Functionality with examples
 3.  Store the `intervalID` and give it a human readable label (i.e. "poll\_messages").
     This is stored in the bound div using *jQuery* data cache.
 
-        $("#widget").data("poll\_messages").interval_id // returns intervalID
-        $("#widget").data("poll\_messages").delay // 3000
+        $("#widget").data("poll_messages").interval_id // returns intervalID
+        $("#widget").data("poll_messages").delay // 3000
 
 4.  Allow pausing/resuming and stopping execution easily by hand (_should\_stop_ and _should\_pause_ flags).
 
-        $("#widget").data("poll\_messages").should_pause = true  // pauses execution
-        $("#widget").data("poll\_messages").should_pause = false // resumes execution  
-        $("#widget").data("poll\_messages").should_stop  = true  // stops execution (calls clearInterval() internally)
+        $("#widget").data("poll_messages").should_pause = true  // pauses execution
+        $("#widget").data("poll_messages").should_pause = false // resumes execution  
+        $("#widget").data("poll_messages").should_stop  = true  // stops execution (calls clearInterval() internally)
 
 5.  Effortlessly overwrite existing periodical execution with a new one by stopping old and starting new one).
     
-        $("#widget").at_intervals(fn1, { delay: 3000, name: "poll\_messages") // stops fn, starts fn1
-        $("#widget").at_intervals(fn2, { delay: 1000, name: "poll\_messages") // stops fn1, starts fn2
-        $("#widget").at_intervals(fn3, { delay: 1000, name: "poll\_messages") // stops fn2, starts fn3
+        $("#widget").at_intervals(fn1, { delay: 3000, name: "poll_messages") // stops fn, starts fn1
+        $("#widget").at_intervals(fn2, { delay: 1000, name: "poll_messages") // stops fn1, starts fn2
+        $("#widget").at_intervals(fn3, { delay: 1000, name: "poll_messages") // stops fn2, starts fn3
