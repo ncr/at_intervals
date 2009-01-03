@@ -30,6 +30,7 @@ Functionality with examples
     The main difference is that the function (_fn_) is called once immediately without waiting 
     for the delay to pass as the original `setInterval()` does.
 
+        $("#widget").at_intervals(fn) // delay is 1 second by default, label is "at_intervals"
         $("#widget").at_intervals(fn, { delay: 3000, name: "poll_messages") // calls fn(), then 3s delay, then fn() again, etc..
 
 2.  Bind the periodical execution to a **DOM** element (usually the div representing the widget).
@@ -63,4 +64,4 @@ Footer
 
 Author: [Jacek Becela](http://github.com/ncr)
 
-License: [CC-BY-SA](http://creativecommons.org/licenses/by-sa/3.0/)
+License: [cc-by-sa](http://creativecommons.org/licenses/by-sa/3.0/)

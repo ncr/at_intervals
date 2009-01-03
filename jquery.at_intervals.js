@@ -2,12 +2,17 @@
 // Website: http://github.com/ncr/at_intervals
 // License: cc-by-sa
 (function($) {
-  $.fn.at_intervals = function(fn, options) { // name and interval are mandatory
+  $.fn.at_intervals = function(fn, options) {
+
+    var settings = $.extend({
+      name:  "at_intervals",
+      delay: 1000, // one second
+    }, options);
 
     return this.each(function() {
       var e = $(this)
-      var name = options.name
-      var delay = options.delay
+      var name = settings.name
+      var delay = settings.delay
       
       var helper = {
         should_stop: function() { // used to completely remove the interval
