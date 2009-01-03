@@ -9,7 +9,6 @@
   <a href="#" id="toggle_visibility">Toggle visibility (pauses/resumes the intervals)</a><br />
   <a href="#" id="pause_resume">Pause/Resume</a><br />
   <a href="#" id="stop">Stop</a><br />
-  <a href="#" id="swap_fn">Swap function</a><br />
   <a href="#" id="start_another">Start another on top of exisiting one</a><br />
   <script type="text/javascript">
     $("#remove_from_dom").click(function(){
@@ -35,18 +34,11 @@
       return false
     });
     
-    $("#swap_fn").click(function(){
-      $("#widget").data("foo").fn = function(){
-        console.log("Swapped!!!")
-      }
-      return false
-    })
-    
     $("#start_another").click(function(){
       $("#widget").at_intervals(function(){
         console.log("Another one...")
-        return false
       }, { name: "foo", delay: 500 })
+      return false
     })
   </script>
 
