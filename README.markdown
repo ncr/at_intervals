@@ -61,4 +61,4 @@ Functionality with examples
 License
 -------
 
-http://creativecommons.org/licenses/by-sa/3.0/
+[CC-BY-SA][http://creativecommons.org/licenses/by-sa/3.0/]
