@@ -30,7 +30,7 @@ Functionality with examples
     The main difference is that the function (_fn_) is called once immediately without waiting 
     for the delay to pass as the original `setInterval()` does.
 
-        $("#widget").at_intervals(fn, { delay: 3000, name: "poll\_messages") // calls fn(), then 3s delay, then fn() again, etc..
+        $("#widget").at_intervals(fn, { delay: 3000, name: "poll_messages") // calls fn(), then 3s delay, then fn() again, etc..
 
 2.  Bind the periodical execution to a *DOM* element (usually the div representing the widget).
     This allows for pausing the execution automatically when the div is hidden and for stopping
@@ -40,7 +40,7 @@ Functionality with examples
         $("#widget").show() // resumes execution
         $("#widget").parent().empty() // stops execution (by removing #widget from DOM)
 
-3.  Store the `intervalID` and give it a human readable label (i.e. "poll_messages").
+3.  Store the `intervalID` and give it a human readable label (i.e. "poll\_messages").
     This is stored in the bound div using *jQuery* data cache.
 
         $("#widget").data("poll\_messages").interval_id // returns intervalID
