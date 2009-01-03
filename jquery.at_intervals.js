@@ -3,11 +3,7 @@
 // License: cc-by-sa
 (function($) {
   $.fn.at_intervals = function(fn, options) {
-
-    var settings = $.extend({
-      name:  "at_intervals",
-      delay: 1000, // one second
-    }, options);
+    var settings = $.extend({}, $.fn.at_intervals.defaults, options);
 
     return this.each(function() {
       var e = $(this)
@@ -62,4 +58,9 @@
       e.data(name).interval_id = interval_id
     })
   };
+
+  $.fn.at_intervals.defaults = {
+    name:  "at_intervals",
+    delay: 1000 // one second
+  }
 })(jQuery);
